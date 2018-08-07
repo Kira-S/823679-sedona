@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Кира Севостьянова](https://up.htmlacademy.ru/htmlcss/22/user/823679).
-* Наставник: Дмитрий Иовлев.
+* Наставник: [Дмитрий Иовлев](https://htmlacademy.ru/profile/skywalker).
 
 ---
 
