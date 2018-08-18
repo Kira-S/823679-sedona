@@ -18,7 +18,54 @@
     </header>
     <main class="container">
       <h1 class="visually-hidden">Где остановиться в Седоне</h1>
-      <!-- Здесь форма для фильтра -->
+      <section class="hotel-filters">
+        <h2 class="visually-hidden">Фильтр отелей</h2>
+        <form class="hotel-filter" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Инфраструктура</legend>
+            <ul>
+              <li class="hotel-filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" id="pool" name="pool" checked>
+                <label for="pool">Бассейн</label>
+              </li>
+              <li class="hotel-filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" id="parking" name="parking">
+                <label for="parking">Парковка</label>
+              </li>
+              <li class="hotel-filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" id="wifi" name="wifi">
+                <label for="wifi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья</legend>
+            <ul>
+              <li class="hotel-filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" id="hotel" name="hotel" checked>
+                <label for="hotel">Гостиница</label>
+              </li>
+              <li class="hotel-filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" id="motel" name="motel" checked>
+                <label for="motel">Мотель</label>
+              </li>
+              <li class="hotel-filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" id="apartment" name="apartment" checked>
+                <label for="apartment">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (р):</legend>
+            <div class="price-range">
+              <span>от 0</span>
+              <span>до 3000</span>
+            </div>
+            <input class="visually-hidden filter-input-range" type="range" name="price-filter" min="0" max="4000" step="200" value="3000">
+          </fieldset>
+          <button class="hotel-filter-button" type="submit">Показать</button>
+        </form>
+      </section>
       <section class="hotels-found">
         <h2 class="visually-hidden">Найденные варианты</h2>
         <p>Найдено: 3</p>
