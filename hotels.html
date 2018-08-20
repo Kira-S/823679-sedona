@@ -58,15 +58,17 @@
           <fieldset>
             <legend>Стоимость в сутки (р):</legend>
             <div class="price-range">
-              <input class="price-filter price-filter-from" type="text" name="price-filter-from" value="от 0" readonly>
-              <input class="price-filter price-filter-to" type="text" name="price-filter-to" value="до 3000" readonly>
+              <label for="price-filter-from">от</label>
+              <input class="price-filter price-filter-from" type="text" id="price-filter-from" name="price-filter-from" value="0">
+              <label for="price-filter-to">до</label>
+              <input class="price-filter price-filter-to" type="text" id="price-filter-to" name="price-filter-to" value="3000">
             </div>
             <button class="price-range-button button-from" type="button">
-              <span class="visually-hidden">от</span>
+              <span class="visually-hidden">Минимальная</span>
             </button>
             <div class="price-range-line"></div>
             <button class="price-range-button button-to" type="button">
-              <span class="visually-hidden">до</span>
+              <span class="visually-hidden">Максимальная</span>
             </button>
           </fieldset>
           <button class="hotel-filter-button" type="submit">Показать</button>
