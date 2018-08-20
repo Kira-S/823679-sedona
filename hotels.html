@@ -58,10 +58,16 @@
           <fieldset>
             <legend>Стоимость в сутки (р):</legend>
             <div class="price-range">
-              <span>от 0</span>
-              <span>до 3000</span>
+              <input class="price-filter price-filter-from" type="text" name="price-filter-from" value="от 0" readonly>
+              <input class="price-filter price-filter-to" type="text" name="price-filter-to" value="до 3000" readonly>
             </div>
-            <input class="visually-hidden filter-input-range" type="range" name="price-filter" min="0" max="4000" step="200" value="3000">
+            <button class="price-range-button button-from" type="button">
+              <span class="visually-hidden">от</span>
+            </button>
+            <div class="price-range-line"></div>
+            <button class="price-range-button button-to" type="button">
+              <span class="visually-hidden">до</span>
+            </button>
           </fieldset>
           <button class="hotel-filter-button" type="submit">Показать</button>
         </form>
@@ -77,22 +83,25 @@
             <li class="hotels-sort-function"><a href="#">По рейтингу</a></li>
           </ul>
           <ul class="hotels-sort-order">
-            <li class="sort-order-up"><a href="#">Сортировка на увеличение</a></li>
-            <li class="sort-order-down"><a href="#">Сортировка на уменьшение</a></li>
+            <li class="sort-order-up">
+              <a href="#"><span class="visually-hidden">По возрастанию</span></a>
+            </li>
+            <li class="sort-order-down">
+              <a href="#"><span class="visually-hidden">По убыванию</span></a></li>
           </ul>
         </div>
         <ul class="hotels-found-list">
           <li class="hotels-found-item">
             <div class="hotels-found-info">
               <h3>
-                <a href="http://amara_resort.html">Amara resort & Spa</a>
+                <a href="#">Amara resort & Spa</a>
               </h3>
               <div class="hotels-brief-info">
                 <span class="hotels-found-type">Гостиница</span>
                 <span class="hotels-found-price">от 4000 р.</span>
               </div>
               <div class="hotels-found-buttons">
-                <a class="details-button" href="http://amara_resort.html">Подробнее</a>
+                <a class="details-button" href="#">Подробнее</a>
                 <a class="book-button" href="#">Забронировать</a>
               </div>
             </div>
@@ -100,21 +109,23 @@
               <img src="img/amara_resort.jpg" alt="Amara resort & Spa" width="135" height="90">
             </div>
             <div class="hotels-found-rating">
-              <span class="stars 5-stars">5 звёзд</span>
+              <div class="stars 5-stars">
+                <span class="visually-hidden">5 звёзд</span>
+              </div>
               <span class="rating">Рейтинг: 8,5</span>
             </div>
           </li>
           <li class="hotels-found-item">
             <div class="hotels-found-info">
               <h3>
-                <a href="http://desert_quail.html">Desert Quail Inn</a>
+                <a href="#">Desert Quail Inn</a>
               </h3>
               <div class="hotels-brief-info">
                 <span class="hotels-found-type">Мотель</span>
                 <span class="hotels-found-price">от 3000 р.</span>
               </div>
               <div class="hotels-found-buttons">
-                <a class="details-button" href="http://desert_quail.html">Подробнее</a>
+                <a class="details-button" href="#">Подробнее</a>
                 <a class="book-button" href="#">Забронировать</a>
               </div>
             </div>
@@ -122,21 +133,23 @@
               <img src="img/desert_quail.jpg" alt="Desert Quail Inn" width="135" height="90">
             </div>
             <div class="hotels-found-rating">
-              <span class="stars 3-stars">3 звезды</span>
+              <div class="stars 3-stars">
+                <span class="visually-hidden">3 звезды</span>
+              </div>
               <span class="rating">Рейтинг: 8,9</span>
             </div>
           </li>
           <li class="hotels-found-item">
             <div class="hotels-found-info">
               <h3>
-                <a href="http://villas_at_poco_diablo.html">Villas at Poco Diablo</a>
+                <a href="#">Villas at Poco Diablo</a>
               </h3>
               <div class="hotels-brief-info">
                 <span class="hotels-found-type">Апартаменты</span>
                 <span class="hotels-found-price">от 2000 р.</span>
               </div>
               <div class="hotels-found-buttons">
-                <a class="details-button" href="http://villas_at_poco_diablo.html">Подробнее</a>
+                <a class="details-button" href="#">Подробнее</a>
                 <a class="book-button" href="#">Забронировать</a>
               </div>
             </div>
@@ -144,7 +157,9 @@
               <img src="img/villas_at_poco_diablo.jpg" alt="Villas at Poco Diablo" width="135" height="90">
             </div>
             <div class="hotels-found-rating">
-              <span class="stars 2-stars">2 звезды</span>
+              <div class="stars 2-stars">
+                <span class="visually-hidden">2 звезды</span>
+              </div>
               <span class="rating">Рейтинг: 9,2</span>
             </div>
           </li>
@@ -155,9 +170,15 @@
       <p class="footer-hashtag">#visitsedona</p>
       <div class="footer-social">
         <ul>
-          <li><a class="social-button social-button-twitter" href="#">Twitter</a></li>
-          <li><a class="social-button social-button-facebook" href="#">Facebook</a></li>
-          <li><a class="social-button social-button-youtube" href="#">Youtube</a></li>
+          <li>
+            <a class="social-button social-button-twitter" href="#"><span class="visually-hidden">Twitter</span></a>
+          </li>
+          <li>
+            <a class="social-button social-button-facebook" href="#"><span class="visually-hidden">Facebook</span></a>
+          </li>
+          <li>
+            <a class="social-button social-button-youtube" href="#"><span class="visually-hidden">Youtube</span></a>
+          </li>
         </ul>
       </div>
       <p class="footer-copyright">
