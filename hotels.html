@@ -25,25 +25,31 @@
         <section class="hotel-filters">
           <h2 class="visually-hidden">Фильтр отелей</h2>
           <form class="hotel-filter" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset>
-              <legend>Инфраструктура</legend>
+            <fieldset class="hotel-feature">
+              <legend>Инфраструктура:</legend>
               <ul>
                 <li class="hotel-filter-option">
+                  <label class="filter-checkbox" for="pool">Бассейн</label>
                   <input class="visually-hidden filter-input-checkbox" type="checkbox" id="pool" name="pool" checked>
-                  <label for="pool">Бассейн</label>
+                  <span class="span"></span>
+
                 </li>
                 <li class="hotel-filter-option">
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" id="parking" name="parking">
-                  <label for="parking">Парковка</label>
+                  <label class="filter-checkbox">
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" id="parking" name="parking">
+                    Парковка
+                  </label>
                 </li>
                 <li class="hotel-filter-option">
-                  <input class="visually-hidden filter-input-checkbox" type="checkbox" id="wifi" name="wifi">
-                  <label for="wifi">Wi-Fi</label>
+                  <label class="filter-checkbox">
+                    <input class="visually-hidden filter-input-checkbox" type="checkbox" id="wifi" name="wifi">
+                    Wi-Fi
+                  </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Тип жилья</legend>
+            <fieldset class="hotel-feature">
+              <legend>Тип жилья:</legend>
               <ul>
                 <li class="hotel-filter-option">
                   <input class="visually-hidden filter-input-checkbox" type="checkbox" id="hotel" name="hotel" checked>
@@ -60,23 +66,29 @@
               </ul>
             </fieldset>
             <div class="fieldset-wrapper">
-            <fieldset>
-              <legend>Стоимость в сутки (р):</legend>
-              <div class="price-range">
-                <label for="price-filter-from">от</label>
-                <input class="price-filter price-filter-from" type="text" id="price-filter-from" name="price-filter-from" value="0">
-                <label for="price-filter-to">до</label>
-                <input class="price-filter price-filter-to" type="text" id="price-filter-to" name="price-filter-to" value="3000">
-              </div>
-              <button class="price-range-button button-from" type="button">
-                <span class="visually-hidden">Минимальная</span>
-              </button>
-              <div class="price-range-line"></div>
-              <button class="price-range-button button-to" type="button">
-                <span class="visually-hidden">Максимальная</span>
-              </button>
-            </fieldset>
-            <button class="hotel-filter-button" type="submit">Показать</button>
+              <fieldset>
+                <legend>Стоимость в сутки (р):</legend>
+                <div class="price-range">
+                  <label>от
+                    <input class="price-filter price-filter-from" type="text" id="price-filter-from" name="price-filter-from" value="0">
+                  </label>
+                  <label>до
+                    <input class="price-filter price-filter-to" type="text" id="price-filter-to" name="price-filter-to" value="3000">
+                  </label>
+                </div>
+                  <div class="range-controls">
+                  <button class="price-range-button button-from" type="button">
+                    <span class="visually-hidden">Минимальная</span>
+                  </button>
+                  <div class="scale">
+                    <div class="price-range-line"></div>
+                  </div>
+                  <button class="price-range-button button-to" type="button">
+                    <span class="visually-hidden">Максимальная</span>
+                  </button>
+                </div>
+              </fieldset>
+              <button class="hotel-filter-button" type="submit">Показать</button>
             </div>
           </form>
         </section>

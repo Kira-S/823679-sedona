@@ -13,7 +13,6 @@ body {
 }
 
 .wrapper {
-  position: relative;
   max-width: 1200px;
   min-width: 768px;
   margin: 0 auto;
@@ -202,10 +201,23 @@ input[type="radio"].visually-hidden {
   width: 33.3334%;
   height: 256px;
   padding-top: 45px;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .feature-description h2 {
   margin: 0;
+  margin-bottom: 25px;
+}
+
+.feature-separate:first-child h2 {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.feature-description span {
+  display: block;
+  margin-bottom: 20px;
 }
 
 .feature-separate:nth-child(2) .feature-description {
@@ -251,10 +263,10 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-.services-item:not(:nth-child(2)) {
+/*.services-item:not(:nth-child(2)) {
   margin-left: 6%;
   margin-right: 6%;
-}
+}*/
 
 .services-item h3 {
   position: relative;
@@ -292,6 +304,9 @@ input[type="radio"].visually-hidden {
 
 .services-list p {
   margin: 0;
+  padding-left: 14%;
+  padding-right: 14%;
+
   color: #333333;
 }
 
@@ -300,17 +315,23 @@ input[type="radio"].visually-hidden {
   width: 33.3334%;
   min-height: 256px;
   padding-top: 45px;
+  padding-left: 5%;
+  padding-right: 5%;
 
   background-color: #eeeeee;
-}
-
-.feature-united:not(:nth-child(2)) {
-
 }
 
 .feature-united h2 {
   margin: 0;
   margin-bottom: 25px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.feature-united:nth-child(4) h2,
+.feature-united:nth-child(5) h2 {
+  padding-left: 22%;
+  padding-right: 22%;
 }
 
 .feature-united span {
@@ -415,9 +436,10 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form-item input {
-  width: 346px;
+  width: 333px;
   height: 38px;
   padding: 0;
+  padding-left: 13px;
   margin-left: auto;
 
   font-size: 14px;
@@ -433,23 +455,74 @@ input[type="radio"].visually-hidden {
   width: 49%;
 }
 
+.item-half-width:last-of-type label {
+  margin-left: 45px;
+}
+
 .item-half-width input {
   width: 38px;
-
+  padding-left: 0;
   margin-left: 0;
+
+  text-align: center;
 }
 
 .amount-button {
+  position: relative;
   width: 38px;
   height: 38px;
-  padding:0;
+  padding: 0;
 
   background-color: #f2f2f2;
-
 }
 
 .amount-less {
   margin-left: auto;
+}
+
+.amount-less::before {
+  content: "";
+  position: absolute;
+  top:18px;
+  left: 12px;
+  width: 12px;
+  height: 3px;
+  background-color: #a9a9a9;
+}
+
+.amount-more::before {
+  content: "";
+  position: absolute;
+  top:18px;
+  left: 12px;
+  width: 11px;
+  height: 3px;
+  background-color: #a9a9a9;
+}
+
+.amount-more::after {
+  content: "";
+  position: absolute;
+  top:14px;
+  left: 16px;
+  width: 3px;
+  height: 11px;
+  background-color: #a9a9a9;
+}
+
+.amount-more:hover::after,
+.amount-more:hover::before,
+.amount-more:focus::after,
+.amount-more:focus::before,
+.amount-less:hover::before,
+.amount-less:focus::before {
+  background-color: #000000;
+}
+
+.amount-more:active::after,
+.amount-more:active::before,
+.amount-less:active::before {
+  background-color: #81b3d2;
 }
 
 .search-form-item input:hover {
@@ -526,6 +599,7 @@ input[type="radio"].visually-hidden {
 }
 
 .map img {
+  display: block;
   height: auto;
 }
 
@@ -536,7 +610,7 @@ input[type="radio"].visually-hidden {
   min-height: 165px;
   padding-left: 6%;
   padding-right: 6%;
-  padding-top: 28px;
+  padding-top: 25px;
   padding-bottom: 25px;
 
   color: #ffffff;
@@ -562,25 +636,155 @@ input[type="radio"].visually-hidden {
 }
 
 .hotel-filter legend {
+  margin-bottom: 25px;
+
   font-size: 16px;
   font-weight: bold;
 }
 
 .hotel-filter ul {
+  margin: 0;
   list-style: none;
 }
 
-.price-range input {
+.hotel-filter .hotel-feature {
+  margin-right: 10%;
+}
+
+.hotel-filter-option {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.hotel-filter-option:last-child {
+  margin-bottom: 0;
+}
+
+.hotel-filter-option::after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 23px;
+  left: -40px;
+  top: -2px;
+
+  background: url("../img/checkbox-off.svg") no-repeat;
+}
+
+.filter-input-checkbox:checked + .hotel-filter-option::after {
+  background: url("../img/checkbox-on.svg") no-repeat;
+}
+
+.fieldset-wrapper {
+  margin-left: auto;
+}
+
+.fieldset-wrapper legend {
+  margin-bottom: 10px;
+}
+
+.price-range {
+  position: relative;
+
+  height: 29px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-range::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-range label {
+  display: inline-block;
+  width: 90px;
+  padding-left: 65px;
+
+  font-size: 14px;
+  line-height: 21px;
+
+  vertical-align: middle;
+}
+
+.price-range .price-filter {
+  width: 50px;
+  margin: 0;
+
   font-size: 14px;
   line-height: 21px;
   text-align: center;
   color: #ffffff;
 
   background-color: transparent;
-  border: 2px solid #ffffff;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.price-range-button {
+  box-sizing: content-box;
+
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.price-range-button:hover {
+  transform: scale(1.1);
+}
+
+.button-from {
+  left: 0;
+}
+
+.button-to {
+  left: 80%;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.price-range-line {
+  width: 80%;
+  height: 2px;
+
+  background-color: #ffffff;
 }
 
 .hotel-filter-button {
+  display: block;
+  margin: 0 auto;
+  padding: 4px 32px;
+
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
@@ -588,6 +792,7 @@ input[type="radio"].visually-hidden {
 
   background-color: transparent;
   border: 2px solid #ffffff;
+  border-radius: 2px;
 }
 
 .hotel-filter-button:hover,
@@ -774,6 +979,10 @@ color: rgba(0, 0, 0, 0.3);
   margin-top: 5px;
 }
 
+.hotels-found-img img {
+  display: block;
+}
+
 .hotels-found-rating {
   margin-left: auto;
 
@@ -868,6 +1077,7 @@ color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   padding-top: 38px;
   padding-bottom: 34px;
@@ -876,9 +1086,8 @@ color: rgba(0, 0, 0, 0.3);
 }
 
 .main-footer-index {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  position: relative;
+  margin-top: -120px;
 }
 
 .footer-social {
