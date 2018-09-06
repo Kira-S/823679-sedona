@@ -674,7 +674,6 @@ input[type="radio"].visually-hidden {
 .fieldset-wrapper {
   margin-left: auto;
   width: 34%;
-  /*width: 220px;*/
   max-width: 318px;
 }
 
@@ -684,6 +683,8 @@ input[type="radio"].visually-hidden {
 
 .price-range {
   position: relative;
+  display: flex;
+  justify-content: flex-start;
 
   margin-bottom: 20px;
   padding-top: 5px;
@@ -709,15 +710,22 @@ input[type="radio"].visually-hidden {
 }
 
 .price-range label {
-  display: inline-block;
   width: 80px;
   max-width: 27%;
-  padding-left: 21%;
 
   font-size: 14px;
   line-height: 21px;
+}
 
-  vertical-align: middle;
+.price-range label:first-child {
+  width: 45px;
+  padding-left: 21%;
+}
+
+.price-range label:last-child {
+  width: 65px;
+  margin-left: auto;
+  padding-right: 12%;
 }
 
 .price-range .price-filter {
