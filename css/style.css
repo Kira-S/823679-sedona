@@ -761,6 +761,7 @@ input[type="radio"].visually-hidden {
 }
 
 .price-filter-input {
+  height: 23px;
   margin: 0;
 
   font-size: 14px;
